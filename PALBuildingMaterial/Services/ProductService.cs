@@ -32,7 +32,7 @@ public class ProductService
                 Name = "Bricks",
                 Description = "Strong red bricks and blocks.",
                 Price = "Available Per Piece",
-                Image = "/images/brick.png",
+                Image = "/Images/brick.png",
                 Category = "Bricks"
             },
             new Product
@@ -41,7 +41,7 @@ public class ProductService
                 Name = "Khadi / Aggregate",
                 Description = "Crushed stone (khadi) used for RCC, concrete and construction work.",
                 Price = "Available Per Brass / Ton",
-                Image = "/images/aggregate.png",
+                Image = "/Images/aggregate.png",
                 Category = "Aggregate"
             },
             new Product
@@ -50,7 +50,7 @@ public class ProductService
                 Name = "Steel",
                 Description = "TMT steel bars for RCC work.",
                 Price = "Available Per Kg",
-                Image = "/images/steel.png",
+                Image = "/Images/steel.png",
                 Category = "Steel"
             },
             new Product
@@ -59,7 +59,7 @@ public class ProductService
                 Name = "Tiles",
                 Description = "Floor and wall tiles.",
                 Price = "Available Per Box",
-                Image = "/images/tiles.png",
+                Image = "/Images/tiles.png",
                 Category = "Tiles"
             },
             new Product
@@ -68,7 +68,7 @@ public class ProductService
                 Name = "Plumbing",
                 Description = "Pipes, taps and fittings.",
                 Price = "Contact for Quote",
-                Image = "/images/plumbing.png",
+                Image = "/Images/plumbing.png",
                 Category = "Plumbing"
             },
             new Product
@@ -77,7 +77,7 @@ public class ProductService
                 Name = "Electrical",
                 Description = "Wires, switches and boards.",
                 Price = "Contact for Quote",
-                Image = "/images/electrical.png",
+                Image = "/Images/electrical.png",
                 Category = "Electrical"
             },
           
@@ -87,7 +87,7 @@ public class ProductService
                 Name = "Hardware",
                 Description = "Tools, nails, screws and fittings.",
                 Price = "Contact for Quote",
-                Image = "/images/hardware.png",
+                Image = "/Images/hardware.png",
                 Category = "Hardware"
             }
         };
