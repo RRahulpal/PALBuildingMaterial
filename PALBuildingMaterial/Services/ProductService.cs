@@ -14,7 +14,7 @@ public class ProductService
                 Name = "Cement",
                 Description = "Premium cement for strong construction.",
                 Price = "Best Market Price",
-                Image = "/images/cement.png",
+                Image = "/Images/cement.png",
                 Category = "Cement"
             },
             new Product
@@ -23,7 +23,7 @@ public class ProductService
                 Name = "Sand",
                 Description = "Fine river and crushed sand.",
                 Price = "Available Per Brass",
-                Image = "/images/sand.png",
+                Image = "/Images/sand.png",
                 Category = "Sand"
             },
             new Product
