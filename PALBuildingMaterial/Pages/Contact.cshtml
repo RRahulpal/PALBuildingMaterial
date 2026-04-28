@@ -1,0 +1,42 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Get Quote / Contact Us</h2>
+
+        <div class="product-grid">
+            <div class="card">
+                <h3>PAL Building Material</h3>
+                <br />
+                <p><strong>Address:</strong> Pant Nagar, Ghatkopar East Mumbai 400075</p>
+                <p><strong>Phone:</strong> +91 81048 81897</p>
+                <p><strong>Email:</strong> palbuildingmaterial@gmail.com</p>
+                <p><strong>Timing:</strong> 9:00 AM - 6:00 PM</p>
+                <br />
+                <a href="tel:+918104881897" class="btn">Call Now</a>
+                <a href="https://wa.me/918104881897" class="btn btn-dark">WhatsApp</a>
+            </div>
+
+            <div class="form" style="grid-column: span 2;">
+                @if (Model.Success)
+                {
+                    <h3 style="color:green;margin-bottom:15px;">Thank you! Your enquiry has been submitted.</h3>
+                }
+
+                <form method="post">
+                    <input asp-for="Enquiry.Name" placeholder="Your Name" required />
+                    <input asp-for="Enquiry.Phone" placeholder="Phone Number" required />
+                    <input asp-for="Enquiry.Email" placeholder="Email Address" />
+                    <input asp-for="Enquiry.Product" placeholder="Product / Quote Items" />
+                    <textarea asp-for="Enquiry.Message" placeholder="Your Message"></textarea>
+
+                    <button class="btn" type="submit">Submit Enquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

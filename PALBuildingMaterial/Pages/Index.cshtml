@@ -1,0 +1,129 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+    <div class="container">
+        <span class="hero-badge">30+ YEARS TRUSTED SHOP</span>
+
+        <h1>
+            Strong Materials, <span>Stronger Future</span>
+        </h1>
+
+        <p>
+            PAL Building Material is a trusted building material supplier in
+            Pant Nagar, Ghatkopar, offering cement, sand, bricks, steel, tiles,
+            plumbing, electrical and hardware materials.
+        </p>
+
+        <a asp-page="/Products" class="btn">Shop Products →</a>
+        <a asp-page="/Contact" class="btn btn-dark">Get Quote</a>
+    </div>
+</section>
+
+<section class="trust-box">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">🚚</div>
+                <div>
+                    <h4>Fast Delivery</h4>
+                    <p>On-time local delivery</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">🛡️</div>
+                <div>
+                    <h4>Best Quality</h4>
+                    <p>Genuine materials</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">🏗️</div>
+                <div>
+                    <h4>Bulk Supply</h4>
+                    <p>For contractors</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">₹</div>
+                <div>
+                    <h4>Best Price</h4>
+                    <p>Fair market rates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Shop By Category</h2>
+
+        <div class="category-grid">
+            @foreach (var item in Model.Products)
+            {
+                <a asp-page="/Products" class="category-card">
+                    <img src="@item.Image" />
+                    <h4>@item.Name</h4>
+                </a>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Popular Products</h2>
+
+        <div class="product-grid">
+            @foreach (var item in Model.Products.Take(6))
+            {
+                <div class="product-card">
+                    <img src="@item.Image" />
+
+                    <div class="product-body">
+                        <h3>@item.Name</h3>
+                        <p>@item.Description</p>
+                        <p class="price">@item.Price</p>
+
+                        <div class="actions">
+                            <a asp-page="/Cart" asp-page-handler="Add" asp-route-id="@item.Id" class="btn">Add Quote</a>
+                            <a asp-page="/Contact" asp-route-product="@item.Name" class="btn btn-dark">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section about-strip">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us?</h2>
+
+        <div class="stats">
+            <div class="stat">
+                <h2>30+</h2>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat">
+                <h2>1000+</h2>
+                <p>Orders Completed</p>
+            </div>
+            <div class="stat">
+                <h2>100%</h2>
+                <p>Quality Focus</p>
+            </div>
+        </div>
+    </div>
+</section>

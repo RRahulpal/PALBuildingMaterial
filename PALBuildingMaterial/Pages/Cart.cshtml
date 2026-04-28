@@ -1,0 +1,42 @@
+﻿@page
+@model CartModel
+@{
+    ViewData["Title"] = "Quote Cart";
+}
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Your Quote Cart</h2>
+
+        @if (!Model.CartProducts.Any())
+        {
+            <div class="card">
+                <h3>Your quote cart is empty.</h3>
+                <p>Add products and send enquiry for quotation.</p>
+                <br />
+                <a asp-page="/Products" class="btn">View Products</a>
+            </div>
+        }
+        else
+        {
+            <div class="product-grid">
+                @foreach (var item in Model.CartProducts)
+                {
+                    <div class="product-card">
+                        <img src="@item.Image" />
+                        <div class="product-body">
+                            <h3>@item.Name</h3>
+                            <p>@item.Description</p>
+                            <p class="price">@item.Price</p>
+                            <a asp-page="/Cart" asp-page-handler="Remove" asp-route-id="@item.Id" class="btn btn-dark">Remove</a>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <br />
+            <a asp-page="/Contact" asp-route-product="@Model.ProductNames" class="btn">Send Quote Enquiry</a>
+            <a asp-page="/Cart" asp-page-handler="Clear" class="btn btn-dark">Clear Cart</a>
+        }
+    </div>
+</section>

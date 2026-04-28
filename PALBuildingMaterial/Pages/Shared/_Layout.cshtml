@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - PAL Building Material</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <span>📞 +91 98925 81080</span>
+            <span>📍 Pant Nagar, Ghatkopar</span>
+            <span>🕘 9:00 AM - 6:00 PM</span>
+        </div>
+    </header>
+
+    <header class="header">
+        <div class="container nav">
+            <a asp-page="/Index" class="brand">
+               @*  <div class="logo">
+                    <span>PAL</span>
+                    <small>BM</small>
+                </div> *@
+                <img src="~/images/logo.png" alt="PAL Logo" class="logo-img" />
+                <div>
+                    <h2>PAL Building Material</h2>
+                    <p>Trusted for 30+ Years</p>
+                </div>
+            </a>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <nav id="menu">
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/Products">Products</a>
+                <a asp-page="/About">About</a>
+                <a asp-page="/Contact">Contact</a>
+                <a asp-page="/Cart" class="cart-link">🛒 Quote Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>PAL Building Material</h3>
+                <p>30+ years trusted building material supplier in PantNagar, Ghatkopar.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a asp-page="/Products">Products</a>
+                <a asp-page="/Contact">Get Quote</a>
+                <a asp-page="/About">About Us</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>📞 +91 98925 81080</p>
+                <p>📍 Pant Nagar, Ghatkopar East Mumbai: 400075</p>
+            </div>
+        </div>
+        <div class="copyright">© @DateTime.Now.Year PAL Building Material</div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
