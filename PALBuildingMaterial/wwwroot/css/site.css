@@ -124,7 +124,7 @@ nav {
 /* HERO */
 .hero {
     position: relative;
-    background: linear-gradient(120deg, rgba(0,0,0,.6), rgba(0,0,0,.2)), url('/images/hero.png');
+    background: linear-gradient(120deg, rgba(0,0,0,.6), rgba(0,0,0,.2)), url('/Images/hero.png');
     background-size: cover;
     background-position: center;
     color: white;
