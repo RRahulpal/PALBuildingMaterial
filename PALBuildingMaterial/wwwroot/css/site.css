@@ -637,6 +637,10 @@ nav {
         flex: 1;
         text-align: center;
     }
+.seo-heading {
+    position: absolute;
+    left: -9999px;
+}
 /* MOBILE */
 @media(max-width: 900px) {
     .topbar {

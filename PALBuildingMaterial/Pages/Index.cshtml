@@ -11,7 +11,9 @@
         <h1>
             Strong Materials, <span>Stronger Future</span>
         </h1>
-
+        <h2 class="seo-heading">
+            Best Building Material Shop in Ghatkopar Mumbai
+        </h2>
         <p>
             PAL Building Material is a trusted building material supplier in
             Pant Nagar, Ghatkopar, offering cement, sand, bricks, steel, tiles,
@@ -69,7 +71,8 @@
             @foreach (var item in Model.Products)
             {
                 <a asp-page="/Products" class="category-card reveal">
-                    <img src="@item.Image" />
+                 @*    <img src="@item.Image" /> *@
+                    <img src="@item.Image" alt="@item.Name building material in Ghatkopar" />
                     <h4>@item.Name</h4>
                 </a>
             }
