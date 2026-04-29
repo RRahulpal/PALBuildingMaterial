@@ -8,6 +8,14 @@
 </head>
 <body>
 
+    <!-- 🔥 Loader START -->
+    <div id="loader">
+        <div class="loader-box">
+            <img src="/images/logo.png" alt="PAL Logo" />
+            <p>Loading PAL Building Material...</p>
+        </div>
+    </div>
+    <!-- 🔥 Loader END -->
     <header class="topbar">
         <div class="container topbar-inner">
             <span>📞 +91 98925 81080</span>
@@ -68,10 +76,32 @@
     </footer>
 
     <script>
+              const revealElements = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+            revealElements.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - 80) {
+                    el.classList.add("active");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        window.addEventListener("load", revealOnScroll);
+              // 🔥 Loader hide
+        window.addEventListener("load", function () {
+            document.getElementById("loader").style.display = "none";
+        });
+
         function toggleMenu() {
             document.getElementById("menu").classList.toggle("show");
         }
     </script>
-
+    <a href="https://wa.me/918104881897" class="whatsapp-float" target="_blank">
+        💬
+    </a>
 </body>
 </html>

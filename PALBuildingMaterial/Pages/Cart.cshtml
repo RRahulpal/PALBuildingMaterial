@@ -35,8 +35,15 @@
             </div>
 
             <br />
-            <a asp-page="/Contact" asp-route-product="@Model.ProductNames" class="btn">Send Quote Enquiry</a>
-            <a asp-page="/Cart" asp-page-handler="Clear" class="btn btn-dark">Clear Cart</a>
+            <a asp-page="/Products" class="btn">➕ Add More Items</a>
+
+            <a asp-page="/Contact" asp-route-product="@Model.ProductNames" class="btn">
+                📩 Send Quote Enquiry
+            </a>
+
+            <a asp-page="/Cart" asp-page-handler="Clear" class="btn btn-dark">
+                🗑 Clear Cart
+            </a>
         }
     </div>
 </section>
