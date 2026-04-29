@@ -625,13 +625,30 @@ nav {
         box-shadow: 0 0 0 0 rgba(37,211,102,0);
     }
 }
+.cart-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 
+    /* Desktop */
+    .cart-actions a {
+        flex: 1;
+        text-align: center;
+    }
 /* MOBILE */
 @media(max-width: 900px) {
     .topbar {
         font-size: 12px;
     }
+    .cart-actions {
+        flex-direction: column;
+    }
 
+        .cart-actions a {
+            width: 100%;
+        }
     .topbar-inner {
         flex-direction: column;
         gap: 4px;
